@@ -1,0 +1,39 @@
+{% block content %}
+<div class="row">
+{% for codepen in codepenData01 %}
+	<div class="col s12 m6 l3">
+		<div class="card shrink">
+			<div class="card-image">
+				<img src="{{codepen.img}}">
+				<a href="#modal{{codepen.hash}}" class="btn-floating halfway-fab waves-effect waves-light black shrink"><i class="fa fa-codepen"></i></a>
+			</div>
+			<div class="card-content">
+				<p>{{codepen.title}}</p>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% for codepen in codepenData01 %}
+<div id="modal{{codepen.hash}}" class="modal bottom-sheet">
+	<div class="modal-footer">
+      <a href="#!" class="modal-action modal-close fa fa-2x fa-close"></a>
+    </div>
+	
+    <div class="modal-content">
+      <p 
+		data-height="600" 
+		data-theme-id="dark" 
+		data-slug-hash="{{codepen.hash}}" 
+		data-default-tab="{{codepen.tabs}}" 
+		data-user="angeal185" 
+		data-embed-version="2" 
+		data-pen-title="{{codepen.title}}" 
+		data-preview="true" 
+		class="codepen"></p>
+    </div>
+    
+</div>
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="app/css/styles.css">
+</head>
+<body>
+<div class="navbar-fixed">
+	<nav>
+		<div class="nav-wrapper">
+			<div class="container">
+			  <a href="#!" class="brand-logo center">Codepen Portfolio</a>
+			</div>
+		</div>
+	</nav>
+</div>
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="page-selection" class="center"></div>
+<footer class="page-footer">
+  <div class="footer-copyright">
+	<div class="container">
+	© 2017 Ben Eaves
+	<a class="grey-text fa fa-github right shrink" href="#!"></a>
+	<a class="grey-text fa fa-codepen right mr-30 shrink" href="#!"></a>
+	<a class="grey-text fa fa-linkedin right mr-30 shrink" href="#!"></a>
+	</div>
+  </div>
+</footer>
+<script src="app/js/jquery.min.js"></script>
+<script src="app/js/pagination.js"></script>
+<script src="app/js/materialize.js"></script>
+<script src="app/js/codepen.js"></script>
+<script> 
+$('#page-selection').pagin({
+    total: 13,
+    page: 1,
+    maxVisible: 5,
+	href: "#page-${number}",
+    leaps: true,
+    firstLastUse: true,
+    first: '←',
+    last: '→',
+    wrapClass: 'pagination',
+    activeClass: 'active',
+    disabledClass: 'disabled',
+    nextClass: 'next',
+    prevClass: 'prev',
+    lastClass: 'last',
+    firstClass: 'first'
+}).on("page", function(event, num){
+    $("#content").load("includes/Page-" + num + ".html", function() {
+			$.get( "app/js/codepen.js" ),
+			$.get( "app/js/app.js" );
+        });
+}); 
+$('.modal').modal();
+</script>
+<script src="app/js/pre.js" defer></script>
+</body>
+</html>

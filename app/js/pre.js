@@ -1,0 +1,13 @@
+$.get( "includes/page-1.html" ),
+$.get( "includes/page-2.html" ),
+$.get( "includes/page-3.html" ),
+$.get( "includes/page-4.html" ),
+$.get( "includes/page-5.html" ),
+$.get( "includes/page-6.html" ),
+$.get( "includes/page-7.html" ),
+$.get( "includes/page-8.html" ),
+$.get( "includes/page-9.html" ),
+$.get( "includes/page-10.html" ),
+$.get( "includes/page-11.html" ),
+$.get( "includes/page-12.html" ),
+$.get( "includes/page-13.html" );
