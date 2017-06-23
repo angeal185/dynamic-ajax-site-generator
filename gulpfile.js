@@ -17,9 +17,6 @@ gulp.task('nunjucks', function() {
 	.pipe(gulp.dest('./includes'))
 });
 
-
-
-
 gulp.task("default", ["start"], function() {
 	console.log(chalk.blue('Server listening with tasks:'),chalk.green(' Start'))
 });

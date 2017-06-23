@@ -1,19 +1,6 @@
 /*preload*/
 
 $(window).on('load', function(){
-	$.get( "includes/Page-1.html" ),
-	$.get( "includes/Page-2.html" ),
-	$.get( "includes/Page-3.html" ),
-	$.get( "includes/Page-4.html" ),
-	$.get( "includes/Page-5.html" ),
-	$.get( "includes/Page-6.html" ),
-	$.get( "includes/Page-7.html" ),
-	$.get( "includes/Page-8.html" ),
-	$.get( "includes/Page-9.html" ),
-	$.get( "includes/Page-10.html" ),
-	$.get( "includes/Page-11.html" ),
-	$.get( "includes/Page-12.html" ),
-	$.get( "includes/Page-13.html" );
 
 	$.fn.preload = function() {
 		this.each(function(){
