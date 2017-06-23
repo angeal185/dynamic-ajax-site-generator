@@ -119,24 +119,24 @@
 
             if(settings.firstLastUse){
                 p = p.concat(['<li data-lp="1" class="', settings.firstClass,
-                       '"><a id="'href(1)'" href="', href(1), '">', settings.first, '</a></li>']);
+                       '"><a href="', href(1), '">', settings.first, '</a></li>']);
             }
             if(settings.prev){
                 p = p.concat(['<li data-lp="1" class="', settings.prevClass,
-                       '"><a id="'href(1)'" href="', href(1), '">', settings.prev, '</a></li>']);
+                       '"><a href="', href(1), '">', settings.prev, '</a></li>']);
             }
             for(var c = 1; c <= Math.min(settings.total, settings.maxVisible); c++){
-                p = p.concat(['<li data-lp="', c, '"><a id="" href="', href(c), '">', c, '</a></li>']);
+                p = p.concat(['<li data-lp="', c, '"><a href="', href(c), '">', c, '</a></li>']);
             }
             if(settings.next){
                 lp = settings.leaps && settings.total > settings.maxVisible
                     ? Math.min(settings.maxVisible + 1, settings.total) : 2;
                 p = p.concat(['<li data-lp="', lp, '" class="',
-                             settings.nextClass, '"><a id="'href(lp)'" href="', href(lp),
+                             settings.nextClass, '"><a href="', href(lp),
                              '">', settings.next, '</a></li>']);
             }
             if(settings.firstLastUse){
-                p = p.concat(['<li data-lp="', settings.total, '" class="last"><a id="'href(settings.total'" href="',
+                p = p.concat(['<li data-lp="', settings.total, '" class="last"><a href="',
                              href(settings.total),'">', settings.last, '</a></li>']);
             }
             p.push('</ul>');
