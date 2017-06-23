@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function(){
 	$.get( "includes/Page-1.html" ),
 	$.get( "includes/Page-2.html" ),
 	$.get( "includes/Page-3.html" ),
