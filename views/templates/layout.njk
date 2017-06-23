@@ -32,9 +32,9 @@
   </div>
 </footer>
 <script src="app/js/jquery.min.js"></script>
-<script src="app/js/pagination.js"></script>
-<script src="app/js/materialize.js"></script>
-<script src="app/js/codepen.js"></script>
+<script src="app/js/pagination.min.js"></script>
+<script src="app/js/materialize.min.js"></script>
+<script src="app/js/codepen.min.js"></script>
 <script> 
 $('#page-selection').pagin({
     total: 14,
@@ -54,12 +54,12 @@ $('#page-selection').pagin({
     firstClass: 'first'
 }).on("page", function(event, num){
     $("#content").load("includes/Page-" + num + ".html", function() {
-			$.get( "app/js/codepen.js" ),
-			$.get( "app/js/app.js" );
+			$.get( "app/js/codepen.min.js" ),
+			$.get( "app/js/app.min.js" );
         });
 }); 
 $('.modal').modal();
 </script>
-<script src="app/js/pre.js" defer></script>
+<script src="app/js/pre.min.js" defer></script>
 </body>
 </html>

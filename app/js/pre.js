@@ -1,3 +1,5 @@
+/*preload*/
+
 $(window).on('load', function(){
 	$.get( "includes/Page-1.html" ),
 	$.get( "includes/Page-2.html" ),
