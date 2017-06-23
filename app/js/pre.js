@@ -11,7 +11,7 @@ $.get( "includes/Page-10.html" ),
 $.get( "includes/Page-11.html" ),
 $.get( "includes/Page-12.html" ),
 $.get( "includes/Page-13.html" );
-
+/*
 $(window).load(function() {
 	$.fn.preload = function() {
 		this.each(function(){
@@ -122,3 +122,4 @@ $(window).load(function() {
 	]).preload();
 
 });
+*/
