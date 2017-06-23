@@ -8,7 +8,7 @@
                 page: 1,
                 maxVisible: null,
                 leaps: true,
-                href: '#page-${number}',
+                href: '#Page-${number}',
                 hrefVariable: '${number}',
                 next: '&raquo;',
                 prev: '&laquo;',
