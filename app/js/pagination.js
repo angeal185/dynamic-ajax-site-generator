@@ -63,7 +63,7 @@
 			lfirst
                 .toggleClass(settings.disabledClass, page === 1)
                 .attr('data-lp', lp)
-                .find('a').attr('href', href(lp));
+                .find('a').attr('id': href(lp),'href': href(lp));
 
             var step = settings.maxVisible == 1 ? 0 : 1;
 
